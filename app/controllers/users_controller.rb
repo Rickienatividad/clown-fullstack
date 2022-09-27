@@ -1,13 +1,20 @@
 class UsersController < ApplicationController
-
-  def create
-    user = User.new (
-      email: params["email"],
-      password: params["password"],
-      password_confirmation: params["password"]
-    )
-    user.save
-    render json: user.as_json
+  def new
+    @user = User.new
+    render template: "users/new"
   end
 
+  def create
+    @user = User.new(
+      email: params["email"],
+      password: params["password"],
+      password_confirmation: params["password"],
+    )
+    @user.save
+    redirect_to root_path
+  end
+
+  def index
+    render template: "users/index"
+  end
 end
