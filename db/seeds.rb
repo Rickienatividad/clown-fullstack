@@ -24,22 +24,58 @@
 # )
 
 #clowns
-clown = Clown.create(
-  name: "sadface sillypants",
-  rate: 85,
+# clown = Clown.create(
+#   name: "sadface sillypants",
+#   rate: 85,
+# )
+
+# clown = Clown.create(
+#   name: "bobo bignose",
+#   rate: 90,
+# )
+
+# clown = Clown.create(
+#   name: "weepy",
+#   rate: 70,
+# )
+
+# clown = Clown.create(
+#   name: "dumpy",
+#   rate: 75,
+# )
+
+# Bookings
+booking = Booking.create(
+  user_id: 1,
+  clown_id: 1,
+  hours: 2,
+  total_price: 170,
 )
 
-clown = Clown.create(
-  name: "bobo bignose",
-  rate: 90,
+booking = Booking.create(
+  user_id: 1,
+  clown_id: 2,
+  hours: 1,
+  total_price: 90,
 )
 
-clown = Clown.create(
-  name: "weepy",
-  rate: 70,
+booking = Booking.create(
+  user_id: 2,
+  clown_id: 3,
+  hours: 2,
+  total_price: 140,
 )
 
-clown = Clown.create(
-  name: "dumpy",
-  rate: 75,
+booking = Booking.create(
+  user_id: 3,
+  clown_id: 2,
+  hours: 3,
+  total_price: 270,
+)
+
+booking = Booking.create(
+  user_id: 2,
+  clown_id: 4,
+  hours: 1,
+  total_price: 75,
 )
