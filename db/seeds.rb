@@ -5,20 +5,41 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-user = User.create(
-  email: "bob@test.com",
-  password: "password",
-  password_confirmation: "password",
+# user = User.create(
+#   email: "bob@test.com",
+#   password: "password",
+#   password_confirmation: "password",
+# )
+
+# user = User.create(
+#   email: "jan@test.com",
+#   password: "password",
+#   password_confirmation: "password",
+# )
+
+# user = User.create(
+#   email: "fred@test.com",
+#   password: "password",
+#   password_confirmation: "password",
+# )
+
+#clowns
+clown = Clown.create(
+  name: "sadface sillypants",
+  rate: 85,
 )
 
-user = User.create(
-  email: "jan@test.com",
-  password: "password",
-  password_confirmation: "password",
+clown = Clown.create(
+  name: "bobo bignose",
+  rate: 90,
 )
 
-user = User.create(
-  email: "fred@test.com",
-  password: "password",
-  password_confirmation: "password",
+clown = Clown.create(
+  name: "weepy",
+  rate: 70,
+)
+
+clown = Clown.create(
+  name: "dumpy",
+  rate: 75,
 )
