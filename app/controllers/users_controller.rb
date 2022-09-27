@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       password_confirmation: params["password"],
     )
     @user.save
-    redirect_to root_path
+    redirect_to "/"
   end
 
   def index
