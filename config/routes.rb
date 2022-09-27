@@ -13,4 +13,9 @@ Rails.application.routes.draw do
 
   #bookings
   resources :bookings
+
+  #ClownImages
+  get "/images/:id" => "images#show"
+  post "/images" => "images#create"
+  delete "/images/:id" => "images#destroy"
 end

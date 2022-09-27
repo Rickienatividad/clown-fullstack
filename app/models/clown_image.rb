@@ -1,0 +1,2 @@
+class ClownImage < ApplicationRecord
+end
