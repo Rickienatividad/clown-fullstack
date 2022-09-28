@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @booking = Booking.all
+    @bookings = Booking.all
     render template: "bookings/index"
   end
 
@@ -14,7 +14,6 @@ class BookingsController < ApplicationController
       user_id: params["user_id"],
       clown_id: params["clown_id"],
       hours: params["hours"],
-      total_price: params["total_price"],
     )
     if @booking.save
       redirect_to @booking
