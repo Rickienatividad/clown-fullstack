@@ -1,3 +1,11 @@
-<%@clowns.each do |clown|%>
-<div><%=clown.name%></div>
-<%end%>
+
+<ul>
+<%@clowns.each do |clown| %>
+<li>
+<a href="http://localhost:3000/clowns/<%=clown.id %>"><%=clown.name%></a>
+</li>
+<% end %>
+</ul>
+
+
+

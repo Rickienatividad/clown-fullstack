@@ -1,0 +1,22 @@
+<%= form_with method: "post", url: "/bookings" do |form| %>
+  <div>
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+  <div>
+    <%= form.label :clown_id %>
+    <%= form.text_field :clown_id %>
+  </div>
+  <div>
+    <%= form.label :hours%>
+    <%= form.text_field :hours %>
+  </div>
+  <div>
+    <%= form.label :total_price%>
+    <%= form.text_field :total_price %>
+  </div>
+  <div>
+    <%= form.submit "Submit" %>
+  </div>
+  
+<% end%>

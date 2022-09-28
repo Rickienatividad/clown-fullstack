@@ -4,14 +4,28 @@ class BookingsController < ApplicationController
     render template: "bookings/index"
   end
 
+  def new
+    @booking = Booking.new
+    render template: "bookings/new"
+  end
+
   def create
-    booking = Booking.new(
+    @booking = Booking.new(
       user_id: params["user_id"],
       clown_id: params["clown_id"],
       hours: params["hours"],
       total_price: params["total_price"],
     )
-    booking.save
-    render template: "bookings/new"
+    if @booking.save
+      redirect_to @booking
+    else
+      puts @booking.errors.full_messages
+      render :new
+    end
+  end
+
+  def show
+    @booking = Booking.find_by(id: params["id"])
+    render template: "bookings/show"
   end
 end
