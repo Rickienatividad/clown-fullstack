@@ -1,11 +1,25 @@
 <%= form_with method: "post", url: "/bookings" do |form| %>
-  <div>
+  <div class="invisible">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.text_field :user_id, value: current_user.id %>
   </div>
   <div>
-    <%= form.label :clown_id %>
-    <%= form.text_field :clown_id %>
+    <div> 
+    <%= form.radio_button :clown_id, Clown.first.id%>
+    <%= form.label :clown_id, 'sadface sillypants', value: Clown.first.id %>
+    </div>
+    <div>
+    <%= form.radio_button :clown_id, Clown.second.id%>
+    <%= form.label :clown_id, 'bobo bignose', value: Clown.second.id %>
+    </div>
+    <div>
+    <%= form.radio_button :clown_id, Clown.third.id%>
+    <%= form.label :clown_id, 'weepy', value: Clown.third.id %>
+    </div>
+    <div>
+    <%= form.radio_button :clown_id, Clown.fourth.id%>
+    <%= form.label :clown_id, 'dumpy', value: Clown.fourth.id %>
+    </div>
   </div>
   <div>
     <%= form.label :hours%>
