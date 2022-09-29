@@ -1,6 +1,9 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user
+
   def index
-    @bookings = Booking.all
+    # @bookings = Booking.all
+    @bookings = Booking.where(user_id: current_user.id)
     render template: "bookings/index"
   end
 

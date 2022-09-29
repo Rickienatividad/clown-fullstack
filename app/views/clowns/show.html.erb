@@ -1,4 +1,14 @@
-<h1>Meet..</h1>
-<h3><%=@clown.name%></h3>
-<img src="<%=@clown.clown_images[0].url%>">
-<div><a href="/bookings/new">Reserve this clown</a></div>
+<div class="show-background", style="height:100vh">
+  <div class="text-center text-warning">
+    <h3>Meet..</h3>
+    <h2><%=@clown.name%></h2>
+  </div>
+  <div class="central">
+    <div>
+      <img class="clown_img align-center" src="<%=@clown.clown_images[0].url%>">
+    </div>
+    <div class="mt-3">
+      <a class="btn btn-outline-warning" href="/bookings/new">Reserve this clown</a>
+    </div>
+  </div>
+</div>

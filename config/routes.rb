@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "sessions#new"
+  root "clowns#index"
   # post "/users" => "users#create"
   resources :users
 

@@ -1,15 +1,19 @@
-<h1>Login</h1>
-<%= form_with method: "post", url: "/sessions" do |form| %>
-  <div>
-    <%= form.label :email %>
-    <%= form.email_field :email %>
+
+  <div class="background-image .img-fluid", style="height: 100vh">
+    <div class="container position-absolute middle-box", style="width: 32rem">
+    <h1>Login</h1>
+    <%= form_with method: "post", url: "/sessions" do |form| %>
+      <div>
+        <div><%= form.label :email %></div>
+        <%= form.email_field :email %>
+      </div>
+      <div>
+        <div><%= form.label :password %></div>
+        <%= form.password_field :password,class:"mb-3" %>
+      </div>
+      <div>
+        <%= form.submit "Submit", class:"mb-3 btn btn-outline-warning" %>
+      </div>
+    </div>
+  <% end%>
   </div>
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-  <div>
-    <%= form.submit "Submit" %>
-  </div>
-  
-<% end%>
