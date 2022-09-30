@@ -15,7 +15,7 @@
  */
  
  .background-image {
-  background: url("https://i0.wp.com/www.megavisions.net/wp-content/uploads/2021/09/wp2637870-twisted-metal-sweet-tooth-wallpaper.png?fit=1440%2C930&ssl=1");
+  background: url("https://i0.wp.com/www.megavisions.net/wp-content/uploads/2021/09/wp2637870-twisted-metal-sweet-tooth-wallpaper.png?fit=1440%2C930&ssl=1") center center/cover;
   background-repeat:no-repeat;
  }
 
@@ -50,6 +50,16 @@
  .clown_img {
   height: 300px;
   width: 300px;
+ }
+
+ .booking-bg {
+  background: url("https://i.ytimg.com/vi/ENDy8GdCUJM/maxresdefault.jpg")center center/cover no-repeat;
+ }
+
+ .member {
+  position: absolute;
+  top: 70%;
+  left: 35%;
  }
 
  

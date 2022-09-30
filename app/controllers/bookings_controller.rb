@@ -28,6 +28,10 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find_by(id: params["id"])
-    render template: "bookings/show"
+    if @booking.user.id == current_user.id
+      render template: "bookings/show"
+    else
+      redirect_to "/bookings"
+    end
   end
 end

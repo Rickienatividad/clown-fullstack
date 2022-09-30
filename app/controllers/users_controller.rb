@@ -6,15 +6,20 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(
-      email: params["email"],
-      password: params["password"],
-      password_confirmation: params["password"],
+      email: params[:user]["email"],
+      password: params[:user]["password"],
+      password_confirmation: params[:user]["password"],
     )
-    @user.save
-    redirect_to "/"
+    if @user.save
+      redirect_to "/"
+    end
   end
 
   def index
-    render template: "users/index"
+    if not current_user
+      redirect_to "/users/new"
+    else
+      redirect_to "/clowns"
+    end
   end
 end
