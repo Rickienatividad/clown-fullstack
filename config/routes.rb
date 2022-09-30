@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   get "/images/:id" => "images#show"
   post "/images" => "images#create"
   delete "/images/:id" => "images#destroy"
+
+  #History
+  get "/history" => "histories#history"
 end
