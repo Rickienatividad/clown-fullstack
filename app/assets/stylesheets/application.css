@@ -62,4 +62,26 @@
   left: 35%;
  }
 
+ .logo {
+  height: 70px;
+  width: 70px;
+ }
+
+ .history-img {
+  background: url("https://i.pinimg.com/originals/4a/13/3e/4a133e30f4bfa084598c83253572aec2.jpg") center center/cover no-repeat;
+ }
+
+ .ms-10 {
+  margin-left: 15rem;
+ }
+
+ .down {
+  position: absolute;
+  top: 15rem;
+ }
+
+ .carousel-img {
+  height:220px;
+  width: 400px;
+ }
  
