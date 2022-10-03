@@ -28,10 +28,31 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find_by(id: params["id"])
-    if @booking.user.id == current_user.id
+    if @booking.user_id == current_user.id
       render template: "bookings/show"
     else
       redirect_to "/bookings"
     end
+  end
+
+  def edit
+    @booking = Booking.find_by(id: params["id"])
+  end
+
+  def update
+    @booking = Booking.find_by(id: params["id"])
+    @booking.user_id = params["user_id"]
+    @booking.clown_id = params["clown_id"]
+    @booking.hours = params["hours"]
+    # render template: "bookings/edit"
+    if @booking.save
+      redirect_to @booking
+    end
+  end
+
+  def destroy
+    @booking = Booking.find_by(id: params["id"])
+    @booking.destroy
+    redirect_to "/bookings"
   end
 end

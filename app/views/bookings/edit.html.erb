@@ -1,0 +1,36 @@
+
+<div class="central bg-light", style="width: 500px">
+  <h3 class="mt-3">Edit Your Booking!!</h3>
+  <%= form_with method: "patch", url: "/bookings/#{@booking.id}" do |form| %>
+    <div class="invisible">
+      <%= form.label :user_id %>
+      <%= form.text_field :user_id, value: current_user.id %>
+    </div>
+    <div>
+      <div class="ms-4"> 
+      <%= form.radio_button :clown_id, Clown.first.id%>
+      <%= form.label :clown_id, 'sadface sillypants', value: Clown.first.id %>
+      </div>
+      <div>
+      <%= form.radio_button :clown_id, Clown.second.id%>
+      <%= form.label :clown_id, 'bobo bignose', value: Clown.second.id %>
+      </div>
+      <div class="me-5">
+      <%= form.radio_button :clown_id, Clown.third.id, class:"me-1"%>
+      <%= form.label :clown_id, 'weepy', value: Clown.third.id %>
+      </div>
+      <div class="me-5">
+      <%= form.radio_button :clown_id, Clown.fourth.id%>
+      <%= form.label :clown_id, 'dumpy', value: Clown.fourth.id %>
+      </div>
+    </div>
+    <div>
+      <%= form.label :hours, "Number of Hours:", class:"mt-3" %>
+      <div><%= form.text_field :hours %></div>
+    </div>
+    <div>
+      <%= form.submit "Submit", class:"mt-3 mb-3" %>
+    </div>
+    
+  <% end%>
+</div>
