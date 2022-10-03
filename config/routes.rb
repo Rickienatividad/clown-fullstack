@@ -21,4 +21,7 @@ Rails.application.routes.draw do
 
   #History
   get "/history" => "histories#history"
+
+  #Reviews
+  get "/reviews/:id" => "reviews#show"
 end
